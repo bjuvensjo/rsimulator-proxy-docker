@@ -1,0 +1,12 @@
+/rsimulator_home
+/target
+.settings
+/.project
+/.classpath
+.DS_Store
+.idea
+.nrepl-port
+*.iml
+*.iws
+**/Slask*
+**/slask*
