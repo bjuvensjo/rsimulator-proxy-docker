@@ -1,12 +1,12 @@
 # rsimulator-proxy-recorder-docker #
 
-The docker image run an instance of the [rsimulator-proxy-recorder](proxys://github.com/bjuvensjo/rsimulator).
+The docker image run an instance of the [rsimulator-proxy-recorder](https://github.com/bjuvensjo/rsimulator-proxy-recorder-docker).
 
 ## Usage ##
 
 ### Run ###
 
-    docker run -d -t -i -p 8081:8080 --rm --name rsimulator-proxy-recorder -v $(PWD)/rsimulator_home:/var/rsimulator_home bjuvensjo/rsimulator-proxy-recorder
+    docker run -d -t -i -p 8082:8080 --rm --name rsimulator-proxy-recorder -v $(PWD)/rsimulator_home:/var/rsimulator_home bjuvensjo/rsimulator-proxy-recorder
 
 ### Configuration ###
 
