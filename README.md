@@ -6,7 +6,7 @@ The docker image run an instance of the [rsimulator-proxy-recorder](https://gith
 
 ### Run ###
 
-    docker run -d -t -i -p 8082:8080 --rm --name rsimulator-proxy-recorder -v $(PWD)/rsimulator_home:/var/rsimulator_home bjuvensjo/rsimulator-proxy-recorder
+    docker run -d -t -i -p 8082:8080 --rm --name rsimulator-proxy-recorder -v $(pwd)/rsimulator_home:/var/image_home bjuvensjo/rsimulator-proxy-recorder
 
 ### Configuration ###
 
@@ -27,9 +27,9 @@ Example content:
     
     def logPpattern = "%d{HH:mm:ss.SSS} %-6relative %-10.8thread %-5level %-10logger{0} %msg%n"
     
-    def rsimulator_home = System.getenv().get("RSIMULATOR_HOME")
+    def image_home = System.getenv().get("IMAGE_HOME")
     appender("FILE", FileAppender) {
-        file = "${rsimulator_home}/rsimulator.log"
+        file = "${image_home}/rsimulator.log"
         immediateFlush = true
         encoder(PatternLayoutEncoder) {
             pattern = logPpattern
@@ -45,7 +45,7 @@ Configures recording, i.e. on/off and output directory.
 Example content:
 
     recorder.record=true
-    recorder.directory=/var/rsimulator_home/recorded
+    recorder.directory=/var/image_home/recorded
 
 #### URIMapper.txt ####
 
